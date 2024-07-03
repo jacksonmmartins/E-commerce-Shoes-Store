@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*definindo cor de fundo padrão e mantendo em 100 por cento o height para colar o footer la em baixo*/
+html,
+body,
+#root {
+  background-color: #c786ff;
+  height: 100%;
+}
