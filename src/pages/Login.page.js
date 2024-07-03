@@ -28,7 +28,7 @@ export default function Login() {
 
     const redirectNow = () => {
       const redirectTo = location.search.replace("?redirectTo=", "");
-      navigate(redirectTo ? redirectTo : "/");
+      navigate(redirectTo ? redirectTo : "/userhome");
     }
 
     const loadUser = async () => {
@@ -98,7 +98,12 @@ export default function Login() {
         </Button>
 
         
-        <p>Não tem um conta ainda? <Link to="/signup">Criar Conta</Link></p>
+        <p>Não tem um conta ainda?
+           <Link to="/signup">
+              <Button variant="contained">
+              Criar Conta
+              </Button>
+            </Link></p>
 
       </form>
     </Card>

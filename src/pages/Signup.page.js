@@ -67,10 +67,10 @@ import styles from './Signup.page.module.css'
      style={{ marginBottom: "1rem" }}
    />
          <TextField
-     label="Senha"
-     type="Senha"
+     label="password"
+     type="password"
      variant="outlined"
-     name="Senha"
+     name="password"
      value={form.password}
      onInput={onFormInputChange}
      style={{ marginBottom: "1rem" }}
@@ -79,7 +79,11 @@ import styles from './Signup.page.module.css'
 <Button variant="contained" color="primary" onClick={onSubmit}>
      Enviar Cadastro
    </Button>
-        <p>Já tem conta? <Link to="/login">Login</Link></p>
+        <p>Já tem conta? <Link to="/login">
+        <Button variant="contained">
+        Login
+        </Button>
+        </Link></p>
       </form>
     </Card>
    
