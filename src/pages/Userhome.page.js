@@ -1,7 +1,8 @@
 import { Button } from '@mui/material'
 import { useContext } from 'react';
 import { UserContext } from './contexts/user.context';
- 
+import ShowBookList from './components/ShowBookList'
+
 export default function Home() {
  const { logOutUser } = useContext(UserContext);
  
@@ -22,7 +23,7 @@ export default function Home() {
  
  return (
    <>
-     <h1>Você fez o login com sucesso!</h1>
+     <ShowBookList />
      <Button variant="contained" onClick={logOut}>Sair</Button>
    </>
  )
