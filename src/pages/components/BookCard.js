@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../App.css';
 
-const BookCard = ({book}) => {
+const BookCard = ({ book }) => {
 
   return (
     <div className='card-container'>
