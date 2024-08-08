@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../../App.css';
 
 function UpdateBookInfo(props) {
   const [book, setBook] = useState({
