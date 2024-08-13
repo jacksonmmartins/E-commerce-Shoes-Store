@@ -41,18 +41,8 @@ function ShowBookDetails(props) {
           </tr>
           <tr>
             <th scope='row'>2</th>
-            <td>Autor</td>
+            <td>Campanha</td>
             <td>{book.author}</td>
-          </tr>
-          <tr>
-            <th scope='row'>3</th>
-            <td>ISBN</td>
-            <td>{book.isbn}</td>
-          </tr>
-          <tr>
-            <th scope='row'>4</th>
-            <td>Publicação</td>
-            <td>{book.publisher}</td>
           </tr>
           <tr>
             <th scope='row'>5</th>
@@ -61,7 +51,7 @@ function ShowBookDetails(props) {
           </tr>
           <tr>
             <th scope='row'>6</th>
-            <td>Descrição</td>
+            <td>Como será aplicado</td>
             <td>{book.description}</td>
           </tr>
         </tbody>
@@ -76,13 +66,13 @@ function ShowBookDetails(props) {
           <div className='col-md-10 m-auto'>
             <br /> <br />
             <Link to='/showbooklist' className='btn btn-outline-warning float-left'>
-              Mostrar lista de livros
+              Mostrar todos os cupons ativos
             </Link>
           </div>
           <br />
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Registro do livro</h1>
-            <p className='lead text-center'>Informações do livro</p>
+            <h1 className='display-4 text-center'>Registro do cupom</h1>
+            <p className='lead text-center'>Informações do cupom ativo</p>
             <hr /> <br />
           </div>
           <div className='col-md-10 m-auto'>{BookItem}</div>
@@ -94,7 +84,7 @@ function ShowBookDetails(props) {
                 onDeleteClick(book._id);
               }}
             >
-              Apagar ficha do livro
+              Apagar cupom ativo
             </button>
           </div>
           <div className='col-md-6 m-auto'>
@@ -102,7 +92,7 @@ function ShowBookDetails(props) {
               to={`/edit-book/${book._id}`}
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Editar dados do livro
+              Editar cupom ativo
             </Link>
           </div>
         </div>

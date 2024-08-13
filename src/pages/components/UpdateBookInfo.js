@@ -65,19 +65,19 @@ function UpdateBookInfo(props) {
           <div className='col-md-8 m-auto'>
             <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Mostrar lista de livros
+              Mostrar cupons ativos
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Editar livro</h1>
-            <p className='lead text-center'>Atualização de informações do livro</p>
+            <h1 className='display-4 text-center'>Editar cupom ativo</h1>
+            <p className='lead text-center'>Atualização de informações do cupom</p>
           </div>
         </div>
 
         <div className='col-md-8 m-auto'>
           <form noValidate onSubmit={onSubmit}>
             <div className='form-group'>
-              <label htmlFor='title'>Titulo</label>
+              <label htmlFor='title'>Titulo do Cupom</label>
               <input
                 type='text'
                 placeholder='Title of the Book'
@@ -87,23 +87,11 @@ function UpdateBookInfo(props) {
                 onChange={onChange}
               />
             </div>
+          
             <br />
 
             <div className='form-group'>
-              <label htmlFor='isbn'>ISBN</label>
-              <input
-                type='text'
-                placeholder='ISBN'
-                name='isbn'
-                className='form-control'
-                value={book.isbn}
-                onChange={onChange}
-              />
-            </div>
-            <br />
-
-            <div className='form-group'>
-              <label htmlFor='author'>Autor</label>
+              <label htmlFor='author'>Campanha</label>
               <input
                 type='text'
                 placeholder='Author'
@@ -116,7 +104,7 @@ function UpdateBookInfo(props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='description'>Descrição</label>
+              <label htmlFor='description'>Como usar o cupom</label>
               <textarea
                 type='text'
                 placeholder='Description of the Book'
@@ -142,7 +130,7 @@ function UpdateBookInfo(props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='publisher'>Publicação</label>
+              <label htmlFor='publisher'>Mensagem do cupom</label>
               <input
                 type='text'
                 placeholder='Publisher of the Book'
@@ -158,7 +146,7 @@ function UpdateBookInfo(props) {
               type='submit'
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Atualizar livro
+              Atualizar Cupom
             </button>
           </form>
         </div>

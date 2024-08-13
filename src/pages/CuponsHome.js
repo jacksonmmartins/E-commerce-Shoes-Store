@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import BookCard from './BookCard';
+import BookCard from './components/BookCard';
 
-function ShowBookList() {
+function CuponsHome() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -28,26 +27,11 @@ function ShowBookList() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center'>Lista de cupons ativos</h2>
+            <h2 className='display-4 text-center'>Aproveite nossos cupons exclusivos</h2>
           </div>
 
           <div className='col-md-11'>
-            <Link
-              to='/create-book'
-              className='btn btn-outline-warning float-right'
-            >
-              + Adicionar Cupom
-            </Link>
-            <br>
-            </br>
-            <br>
-            </br>
-            <Link
-              to='/show-book/:id'
-              className='btn btn-outline-warning float-right'
-            >
-              + Gerenciar Cupons
-            </Link>
+
             <br />
             <br />
             <hr />
@@ -60,4 +44,4 @@ function ShowBookList() {
   );
 }
 
-export default ShowBookList;
+export default CuponsHome;
