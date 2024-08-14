@@ -5,7 +5,6 @@ import axios from 'axios';
 function UpdateBookInfo(props) {
   const [book, setBook] = useState({
     title: '',
-    isbn: '',
     author: '',
     description: '',
     published_date: '',
@@ -21,7 +20,6 @@ function UpdateBookInfo(props) {
       .then((res) => {
         setBook({
           title: res.data.title,
-          isbn: res.data.isbn,
           author: res.data.author,
           description: res.data.description,
           published_date: res.data.published_date,
@@ -42,7 +40,6 @@ function UpdateBookInfo(props) {
 
     const data = {
       title: book.title,
-      isbn: book.isbn,
       author: book.author,
       description: book.description,
       published_date: book.published_date,

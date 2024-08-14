@@ -6,10 +6,8 @@ function ComentariosHome() {
   return (
     <>
 
-      <h2 class='display-5 text-center bg-primary rounded-pill'>Aproveite nossos cupons exclusivos</h2>
+      <h2 class='display-5 text-center bg-primary rounded-pill text-white'>Comentário de nossos clientes</h2>
 
-      <br>
-      </br>
       <CardGroup>
         <Card bg='dark'>
 
@@ -62,7 +60,7 @@ function ComentariosHome() {
             <small className="text-white">Cobre a oferta da concorrência</small>
           </Card.Footer>
         </Card>
-
+    
       </CardGroup>
     </>
   );

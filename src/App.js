@@ -13,18 +13,23 @@ import ShowBookDetails from "./pages/components/ShowBookDetails";
 import UpdateBookInfo from "./pages/components/UpdateBookInfo";
 import Supportus from './pages/Supportus';
 import Contact from './pages/Contact';
-import About from "./pages/About";
 
-import "./index.css";
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import './index.css'
+
 import { Container } from "react-bootstrap";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
     <BrowserRouter>
       <UserProvider>
+        
         <Navbar />
+        <div class='body'>
         <Container>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -32,7 +37,7 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/supportus" element={<Supportus />} />
           <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/about" element={<About />} />
+    
 
             <Route element={<PrivateRoute />}>
             <Route exact path="/userhome" element={<Homeuser />} />
@@ -44,7 +49,9 @@ function App() {
 
           </Route>
         </Routes>
+        <Footer />
         </Container>
+        </div>
       </UserProvider>
     </BrowserRouter>
   );

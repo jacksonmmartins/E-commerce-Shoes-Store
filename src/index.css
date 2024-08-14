@@ -1,7 +1,14 @@
-.card{
-  background-color: aqua;
+:root {
+  background-color: #0d1628;
 }
 
+.quebra_linhas {
+  flex-wrap: wrap;
+}
+
+.body{
+  background-color: #0d1628;
+}
 .spacetop {
   margin-top: 2em;
 }
@@ -39,6 +46,19 @@
   display: flex;
   flex-wrap: wrap;
   padding: 5% 10%;
+  text-decoration: none;
+}
+
+.list_2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5% 10%;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.disable_links {
+  text-decoration: none;
 }
 
 .card-container {

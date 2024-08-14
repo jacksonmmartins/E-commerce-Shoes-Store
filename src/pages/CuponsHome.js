@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import BookCard from './components/BookCard';
+import BookCard from './components/Cupomcard';
 
 function CuponsHome() {
   const [books, setBooks] = useState([]);
@@ -22,12 +22,12 @@ function CuponsHome() {
       : books.map((book, k) => <BookCard book={book} key={k} />);
 
   return (
-    <div className='ShowBookList'>
+    <div>
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center'>Aproveite nossos cupons exclusivos</h2>
+            <h2 className='display-4 text-center text-white'>Aproveite nossos cupons exclusivos</h2>
           </div>
 
           <div className='col-md-11'>
@@ -38,7 +38,7 @@ function CuponsHome() {
           </div>
         </div>
 
-        <div className='list'>{bookList}</div>
+        <div className='list_2'>{bookList}</div>
       </div>
     </div>
   );

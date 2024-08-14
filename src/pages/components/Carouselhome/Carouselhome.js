@@ -5,26 +5,29 @@ import { MDBCarousel, MDBCarouselItem, MDBCarouselCaption } from 'mdb-react-ui-k
 import Promo from '../Img/Ofertas do Dia.png';
 import Novidades from '../Img/Novidades.png';
 import Cadastro from '../Img/Baner_cadastro.png'
+import { Card } from 'react-bootstrap';
 
 export default function Carouselhome() {
   return (
     <MDBCarousel showControls fade className='card'>
       <MDBCarouselItem >
-        <img src={Promo} className='d-block w-100' alt='...' />
+        <Card>
+        <img src={Promo} className='d-block w-100 round' alt='...' />
+        </Card>
         <MDBCarouselCaption>
 
         </MDBCarouselCaption>
       </MDBCarouselItem>
 
       <MDBCarouselItem >
-        <img src={Novidades} className='d-block w-100' alt='...' />
+        <img src={Novidades} className='d-block w-100 round' alt='...' />
         <MDBCarouselCaption>
 
         </MDBCarouselCaption>
       </MDBCarouselItem>
 
       <MDBCarouselItem >
-        <img src={Cadastro} className='d-block w-100' alt='...' />
+        <img src={Cadastro} className='d-block w-100 round' alt='...' />
         <MDBCarouselCaption>
 
         </MDBCarouselCaption>

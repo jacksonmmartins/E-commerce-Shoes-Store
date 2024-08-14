@@ -47,12 +47,12 @@ const Signup = () => {
 
   return (
     <Container maxWidth="sm" >
-
+      <br />
       <Card sx={{
         bgcolor: 'white',
         height: '70vh',
         borderRadius: '5%',
-        marginTop: '10vh',
+        marginTop: '1.5vh',
       }}
       >
         <form style={{ display: "flex", flexDirection: "column", maxWidth: "300px", margin: "auto", marginTop: '7vh' }}>
@@ -79,6 +79,7 @@ const Signup = () => {
           <Button variant="contained" color="primary" onClick={onSubmit}>
             Enviar Cadastro
           </Button>
+          <br />
           <p>Já tem conta? <Link to="/login">
             <Button variant="contained">
               Login
@@ -86,7 +87,7 @@ const Signup = () => {
           </Link></p>
         </form>
       </Card>
-
+      <br />
 
     </Container>
   );

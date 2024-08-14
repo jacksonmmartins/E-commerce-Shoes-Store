@@ -8,7 +8,6 @@ const CreateBook = (props) => {
 
   const [book, setBook] = useState({
     title: "",
-    isbn: "",
     author: "",
     description: "",
     published_date: "",
@@ -26,7 +25,6 @@ const CreateBook = (props) => {
       .then((res) => {
         setBook({
           title: "",
-          isbn: "",
           author: "",
           description: "",
           published_date: "",
@@ -46,18 +44,18 @@ const CreateBook = (props) => {
         <div className="row">
           <div className="col-md-8 m-auto">
             <br />
-            <Link to="/showbooklist" className="btn btn-outline-warning float-left">
-              Mostrar Cupons Ativos
+            <Link to="/" className="btn btn-outline-warning float-left">
+              Mostrar lista de livros
             </Link>
           </div>
           <div className="col-md-10 m-auto">
-            <h1 className="display-4 text-center">Adicionar Cupom</h1>
-            <p className="lead text-center">Inserir novo Cupom</p>
+            <h1 className="display-4 text-center">Adicionar livro</h1>
+            <p className="lead text-center">Inserir novo livro</p>
             <form noValidate onSubmit={onSubmit}>
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Titulo do Cupom"
+                  placeholder="Titulo do livro"
                   name="title"
                   className="form-control"
                   value={book.title}
@@ -65,10 +63,11 @@ const CreateBook = (props) => {
                 />
               </div>
               <br />
+              
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Campanha"
+                  placeholder="Autor"
                   name="author"
                   className="form-control"
                   value={book.author}
@@ -79,7 +78,7 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Como usar o cupom"
+                  placeholder="Descrição do livro"
                   name="description"
                   className="form-control"
                   value={book.description}
@@ -101,7 +100,7 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Mensagem do cupom"
+                  placeholder="Editora do livro"
                   name="publisher"
                   className="form-control"
                   value={book.publisher}

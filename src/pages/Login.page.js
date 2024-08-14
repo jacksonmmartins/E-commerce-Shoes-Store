@@ -65,11 +65,13 @@ export default function Login() {
   return (
     <Container maxWidth="sm" >
 
+      <br />
+
       <Card sx={{
         bgcolor: 'white',
         height: '70vh',
         borderRadius: '5%',
-        marginTop: '10vh',
+        marginTop: '1.5vh',
       }}
       >
         <form style={{ display: "flex", flexDirection: "column", maxWidth: "300px", margin: "auto", marginTop: '7vh' }}>
@@ -107,7 +109,7 @@ export default function Login() {
 
         </form>
       </Card>
-
+      <br />
     </Container>
   );
 }
