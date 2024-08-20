@@ -55,7 +55,7 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Titulo do livro"
+                  placeholder="Titulo do Cupom"
                   name="title"
                   className="form-control"
                   value={book.title}
@@ -67,7 +67,7 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Autor"
+                  placeholder="Campanha"
                   name="author"
                   className="form-control"
                   value={book.author}
@@ -78,7 +78,7 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Descrição do livro"
+                  placeholder="Como utilizar o cupom"
                   name="description"
                   className="form-control"
                   value={book.description}
@@ -100,7 +100,7 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Editora do livro"
+                  placeholder="Mensagem do cupom"
                   name="publisher"
                   className="form-control"
                   value={book.publisher}

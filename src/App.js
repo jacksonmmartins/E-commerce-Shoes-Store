@@ -16,6 +16,7 @@ import Contact from './pages/Contact';
 
 import ModaVerao from "./pages/CategoriasModa/ModaVerao/ModaVerao";
 import ModaInverno from "./pages/CategoriasModa/ModaInverno/ModaInverno";
+import VestOutlet from "./pages/CategoriasModa/VestOutlet/VestOutlet";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -41,6 +42,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/modaverao" element={<ModaVerao />} />
           <Route exact path="/modainverno" element={<ModaInverno />} />
+          <Route exact path="/vestoutlet" element={<VestOutlet />} />
 
             <Route element={<PrivateRoute />}>
             <Route exact path="/userhome" element={<Homeuser />} />
