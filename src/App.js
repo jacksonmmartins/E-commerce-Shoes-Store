@@ -14,6 +14,8 @@ import UpdateBookInfo from "./pages/components/UpdateBookInfo";
 import Supportus from './pages/Supportus';
 import Contact from './pages/Contact';
 
+import ModaVerao from "./pages/CategoriasModa/ModaVerao/ModaVerao";
+import ModaInverno from "./pages/CategoriasModa/ModaInverno/ModaInverno";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,7 +39,8 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/supportus" element={<Supportus />} />
           <Route exact path="/contact" element={<Contact />} />
-    
+          <Route exact path="/modaverao" element={<ModaVerao />} />
+          <Route exact path="/modainverno" element={<ModaInverno />} />
 
             <Route element={<PrivateRoute />}>
             <Route exact path="/userhome" element={<Homeuser />} />
