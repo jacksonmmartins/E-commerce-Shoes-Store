@@ -55,7 +55,7 @@ const Signup = () => {
         marginTop: '1.5vh',
       }}
       >
-        <form style={{ display: "flex", flexDirection: "column", maxWidth: "300px", margin: "auto", marginTop: '7vh' }}>
+        <form style={{ display: "flex", flexDirection: "column", maxWidth: "300px", margin: "auto", marginTop: '7vh' }} autocomplete="off">
           <h1 className={styles.title}>Cadastre-se</h1>
           <TextField
             label="Email"

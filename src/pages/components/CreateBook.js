@@ -45,12 +45,12 @@ const CreateBook = (props) => {
           <div className="col-md-8 m-auto">
             <br />
             <Link to="/" className="btn btn-outline-warning float-left">
-              Mostrar lista de livros
+              Mostrar lista de Cupons
             </Link>
           </div>
           <div className="col-md-10 m-auto">
-            <h1 className="display-4 text-center">Adicionar livro</h1>
-            <p className="lead text-center">Inserir novo livro</p>
+            <h1 className="display-4 text-center">Adicionar Cupom</h1>
+            <p className="lead text-center">Inserir novo Cupom </p>
             <form noValidate onSubmit={onSubmit}>
               <div className="form-group">
                 <input
