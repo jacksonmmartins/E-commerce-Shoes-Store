@@ -6,7 +6,7 @@ function ComentariosHome() {
   return (
     <>
 
-      <h2 class='display-5 text-center bg-primary rounded-pill text-white'>Comentário de nossos clientes</h2>
+      <h2 class='display-5 text-center bg-dark rounded-pill text-white'>Comentários de nossos clientes</h2>
 
       <CardGroup>
         <Card bg='dark'>
@@ -22,9 +22,9 @@ function ComentariosHome() {
               dentro da embalagem personalizado. Recomendo
             </Card.Text>
           </Card.Body>
-          <Card.Footer class='text-center'>
+          <Card.Text class='text-center'>
             <small className="text-white">Voltaria a comprar novamente!!!</small>
-          </Card.Footer>
+          </Card.Text>
         </Card>
 
         <Card bg='dark'>
@@ -39,9 +39,9 @@ function ComentariosHome() {
               Tradicionamente a melhor da região, e com as melhores ofertas, e entrega muito rápida.
             </Card.Text>
           </Card.Body>
-          <Card.Footer class='text-center'>
+          <Card.Text class='text-center'>
             <small className="text-white">Sempre melhor preço</small>
-          </Card.Footer>
+          </Card.Text>
         </Card>
 
         <Card bg='dark'>
@@ -56,9 +56,9 @@ function ComentariosHome() {
               família!
             </Card.Text>
           </Card.Body>
-          <Card.Footer class='text-center'>
+          <Card.Text class='text-center'>
             <small className="text-white">Cobre a oferta da concorrência</small>
-          </Card.Footer>
+          </Card.Text>
         </Card>
     
       </CardGroup>

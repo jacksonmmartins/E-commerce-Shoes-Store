@@ -9,7 +9,7 @@ import { Card } from 'react-bootstrap';
 
 export default function Carouselhome() {
   return (
-    <MDBCarousel showControls fade className='card'>
+    <MDBCarousel showControls fade >
       <MDBCarouselItem >
         <Card>
         <img src={Promo} className='d-block w-100 round' alt='...' />

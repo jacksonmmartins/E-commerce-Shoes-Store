@@ -2,6 +2,14 @@
   background-color: #0d1628;
 }
 
+.desativarsublinhado{
+  text-decoration: none;
+}
+
+.espaçamento{
+  word-spacing: 10%;
+}
+
 .quebra_linhas {
   flex-wrap: wrap;
 }

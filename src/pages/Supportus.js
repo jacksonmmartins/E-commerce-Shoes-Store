@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import '../index.css'
 
 function Categorias() {
     return (
@@ -19,16 +19,16 @@ function Categorias() {
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <Link className="disable_links">
-                            <h5 class="card-title">Moda Verão</h5>
-                            <p class="card-text">Aproveite nossas ofertas de verão, para todas as ocasiões</p>
+                            <Link to='/modaverao' class="desativarsublinhado">
+                            <h4 class="card-title text-dark">Moda Verão</h4>
+                            <h5 class="card-text">Aproveite nossas ofertas de verão, para todas as ocasiões</h5>
                             </Link>
                         </div>
                         
                     </div>
                 </div>
-
-                <div class="card mb-3">
+            
+                <div class="card mb-2">
                     <div class="row g-0">
                         <div class="col-md-4">
                         <Link to='/modainverno'>
@@ -41,16 +41,16 @@ function Categorias() {
 
                         <div class="col-md-8">
                             <div class="card-body">
-                            <Link className="disable_links">
-                                <h5 class="card-title">Moda Inverno</h5>
-                                <p class="card-text">Também estamos presente no inverno, você pode contar com calçados incriveis</p>
+                            <Link to='/modainverno' class="desativarsublinhado">
+                                <h4 class="card-title text-dark">Moda Inverno</h4>
+                                <h5 class="card-text">Também estamos presente no inverno, você pode contar com calçados incriveis</h5>
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                <div class="card mb-">
                     <div class="row g-0">
                         <div class="col-md-4">
                         <Link to='/vestoutlet'>
@@ -62,9 +62,9 @@ function Categorias() {
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                            <Link className="disable_links">
-                                <h5 class="card-title">Linha Outlet</h5>
-                                <p class="card-text">O melhor preço sempre, confira já!</p>
+                            <Link to='/vestoutlet' class="desativarsublinhado">
+                                <h4 class="card-title text-dark">Linha Outlet</h4>
+                                <h5 class="card-text">O melhor preço sempre, confira já!</h5>
                             </Link>
                             </div>
                         </div>

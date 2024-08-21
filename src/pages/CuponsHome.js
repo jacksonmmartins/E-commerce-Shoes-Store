@@ -33,8 +33,7 @@ function CuponsHome() {
           <div className='col-md-11'>
 
             <br />
-            <br />
-            <hr />
+         
           </div>
         </div>
 
