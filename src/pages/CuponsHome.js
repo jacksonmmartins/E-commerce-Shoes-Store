@@ -27,17 +27,10 @@ function CuponsHome() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center text-white'>Aproveite nossos cupons exclusivos</h2>
-          </div>
-
-          <div className='col-md-11'>
-
-            <br />
-         
+            <h2 className='display-4 text-center text-white'>Aproveite nossos cupons exclusivos</h2> 
           </div>
         </div>
-
-        <div className='list_2'>{bookList}</div>
+        <div class='list_2'>{bookList}</div>
       </div>
     </div>
   );

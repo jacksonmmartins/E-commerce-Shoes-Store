@@ -18,13 +18,16 @@ const BookCard = ({ book }) => {
           />
           <div className='desc'>
             <br />
+            <div class='card-header text-dark'>
             <h2>
               {book.title}
             </h2>
+            </div>
             <h3>{book.author}</h3>
             <p>{book.description}</p>
           </div>
         </Link>
+        <br />
         <br />
         <br />
         <br />
