@@ -3,43 +3,41 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const CreateBook = (props) => {
+const CreateCupom = (props) => {
   const navigate = useNavigate();
 
-  const [book, setBook] = useState({
-    title: "",
-    author: "",
-    description: "",
-    published_date: "",
+  const [cupom, setCupom] = useState({
+    titulo: "",
+    desconto: "",
+    comousar: "",
     publisher: "",
   });
 
   const onChange = (e) => {
-    setBook({ ...book, [e.target.name]: e.target.value });
+    setCupom({ ...cupom, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://mern-omega-ten.vercel.app/api/books", book)
+      .post("https://mern-omega-ten.vercel.app/api/cupons", cupom)
       .then((res) => {
-        setBook({
-          title: "",
-          author: "",
-          description: "",
-          published_date: "",
+        setCupom({
+          titulo: "",
+          desconto: "",
+          comousar: "",
           publisher: "",
         });
         // Push to /
         navigate("/");
       })
       .catch((err) => {
-        console.log("Error in CreateBook!");
+        console.log("Error in CreateCupom!");
       });
   };
 
   return (
-    <div className="CreateBook">
+    <div className="CreateCupom">
       <div className="container">
         <div className="row">
           <div className="col-md-8 m-auto">
@@ -49,16 +47,16 @@ const CreateBook = (props) => {
             </Link>
           </div>
           <div className="col-md-10 m-auto">
-            <h1 className="display-4 text-center">Adicionar Cupom</h1>
+            <h1 className="display-4 text-center text-light">Adicionar Cupom</h1>
             <p className="lead text-center">Inserir novo Cupom </p>
             <form noValidate onSubmit={onSubmit}>
               <div className="form-group">
                 <input
                   type="text"
                   placeholder="Titulo do Cupom"
-                  name="title"
+                  name="titulo"
                   className="form-control"
-                  value={book.title}
+                  value={cupom.titulo}
                   onChange={onChange}
                 />
               </div>
@@ -67,10 +65,10 @@ const CreateBook = (props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Campanha"
-                  name="author"
+                  placeholder="Desconto"
+                  name="desconto"
                   className="form-control"
-                  value={book.author}
+                  value={cupom.desconto}
                   onChange={onChange}
                 />
               </div>
@@ -79,34 +77,13 @@ const CreateBook = (props) => {
                 <input
                   type="text"
                   placeholder="Como utilizar o cupom"
-                  name="description"
+                  name="comousar"
                   className="form-control"
-                  value={book.description}
+                  value={cupom.comousar}
                   onChange={onChange}
                 />
               </div>
               <br />
-              <div className="form-group">
-                <input
-                  type="date"
-                  placeholder="Data de publicação"
-                  name="published_date"
-                  className="form-control"
-                  value={book.published_date}
-                  onChange={onChange}
-                />
-              </div>
-              <br />
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Mensagem do cupom"
-                  name="publisher"
-                  className="form-control"
-                  value={book.publisher}
-                  onChange={onChange}
-                />
-              </div>
               <button
                 type="submit"
                 className="btn btn-outline-warning btn-block mt-4 mb-4 w-100"
@@ -121,4 +98,4 @@ const CreateBook = (props) => {
   );
 };
 
-export default CreateBook;
+export default CreateCupom;

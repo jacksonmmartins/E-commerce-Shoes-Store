@@ -19,7 +19,7 @@ function ShowBookList() {
 
   const bookList =
     books.length === 0
-      ? 'there is no book record!'
+      ? ''
       : books.map((book, k) => <BookCard book={book} key={k} />);
 
   return (

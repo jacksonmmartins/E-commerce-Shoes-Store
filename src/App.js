@@ -7,10 +7,10 @@ import PrivateRoute from "./pages/PrivateRoute.page";
 import Signup from "./pages/Signup.page";
 import Navbar from "./pages/Navbar"
 
-import CreateBook from "./pages/components/CreateBook";
-import ShowBookList from "./pages/components/ShowBookList";
-import ShowBookDetails from "./pages/components/ShowBookDetails";
-import UpdateBookInfo from "./pages/components/UpdateBookInfo";
+import CriarCupom from "./pages/components/CriarCupom";
+import ListaDeCupons from "./pages/components/ListaDeCupons";
+import DetalhesDoCupom from "./pages/components/DetalhesDoCupom";
+import UpdateCupomInfo from "./pages/components/UpdateCupomInfo";
 import Supportus from './pages/Supportus';
 import Contact from './pages/Contact';
 
@@ -47,10 +47,10 @@ function App() {
             <Route element={<PrivateRoute />}>
             <Route exact path="/userhome" element={<Homeuser />} />
 
-            <Route exact path="/create-book" element={<CreateBook />} />
-            <Route exact path="/showbooklist" element={<ShowBookList />} />
-            <Route exact path="/show-book/:id" element={<ShowBookDetails />} />
-            <Route exact path="/edit-book/:id" element={<UpdateBookInfo />} />
+            <Route exact path="/create-book" element={<CriarCupom />} />
+            <Route exact path="/ListaDeCupons" element={<ListaDeCupons />} />
+            <Route exact path="/show-book/:id" element={<DetalhesDoCupom />} />
+            <Route exact path="/edit-book/:id" element={<UpdateCupomInfo />} />
 
           </Route>
         </Routes>

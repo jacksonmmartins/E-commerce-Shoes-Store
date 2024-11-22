@@ -1,6 +1,8 @@
-import './Navbar.css'
+//Import do css da Navbar
+import './Navbar.css';
 
 function Navbar() {
+  
   return (
     <>
     <br />

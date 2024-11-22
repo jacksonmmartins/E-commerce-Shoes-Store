@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
 import { useContext } from 'react';
 import { UserContext } from './contexts/user.context';
-import ShowBookList from './components/ShowBookList'
+import ShowBookList from './components/ListaDeCupons'
 
 export default function Home() {
   const { logOutUser } = useContext(UserContext);
