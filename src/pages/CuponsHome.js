@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import BookCard from './components/Cupomcard';
+import CupomCard from './components/Cupomcard';
 
 function CuponsHome() {
-  const [books, setBooks] = useState([]);
+  const [cupons, setCupons] = useState([]);
 
   useEffect(() => {
     axios
-      .get('https://mern-omega-ten.vercel.app/api/books')
+      .get('https://mern-omega-ten.vercel.app/api/cupons')
       .then((res) => {
-        setBooks(res.data);
+        setCupons(res.data);
       })
       .catch((err) => {
-        console.log('Error from ShowBookList');
+        console.log('Erro para apresentar cupons');
       });
   }, []);
 
-  const bookList =
-    books.length === 0
+  const cupomList =
+    cupons.length === 0
       ? ''
-      : books.map((book, k) => <BookCard book={book} key={k} />);
+      : cupons.map((cupom, k) => <CupomCard cupom={cupom} key={k} />);
 
   return (
     <div>
@@ -30,7 +30,7 @@ function CuponsHome() {
             <h2 className='display-4 text-center text-white'>Aproveite nossos cupons exclusivos</h2> 
           </div>
         </div>
-        <div class='list_2'>{bookList}</div>
+        <div class='list_2'>{cupomList}</div>
       </div>
     </div>
   );

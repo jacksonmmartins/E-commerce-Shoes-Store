@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-function UpdateBookInfo(props) {
-  const [book, setBook] = useState({
-    title: '',
-    author: '',
-    description: '',
-    published_date: '',
+function UpdateCupomInfo(props) {
+  const [cupom, setCupom] = useState({
+    titulo: '',
+    desconto: '',
+    comousar: '',
     publisher: '',
   });
 
@@ -16,47 +15,45 @@ function UpdateBookInfo(props) {
 
   useEffect(() => {
     axios
-      .get(`https://mern-omega-ten.vercel.app/api/books/${id}`)
+      .get(`https://mern-omega-ten.vercel.app/api/cupons/${id}`)
       .then((res) => {
-        setBook({
-          title: res.data.title,
-          author: res.data.author,
-          description: res.data.description,
-          published_date: res.data.published_date,
+        setCupom({
+          titulo: res.data.titulo,
+          desconto: res.data.desconto,
+          comousar: res.data.comousar,
           publisher: res.data.publisher,
         });
       })
       .catch((err) => {
-        console.log('Error from UpdateBookInfo');
+        console.log('Error ao atualizar as informações do cupom');
       });
   }, [id]);
 
   const onChange = (e) => {
-    setBook({ ...book, [e.target.name]: e.target.value });
+    setCupom({ ...cupom, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     const data = {
-      title: book.title,
-      author: book.author,
-      description: book.description,
-      published_date: book.published_date,
-      publisher: book.publisher,
+      titulo: cupom.titulo,
+      desconto: cupom.desconto,
+      comousar: cupom.comousar,
+      publisher: cupom.publisher,
     };
 
-    axios.put(`https://mern-omega-ten.vercel.app/api/books/${id}`, data)
+    axios.put(`https://mern-omega-ten.vercel.app/api/cupons/${id}`, data)
       .then((res) => {
-        navigate(`/show-book/${id}`);
+        navigate(`/show-cupom/${id}`);
       })
       .catch((err) => {
-        console.log('Error in UpdateBookInfo!');
+        console.log('Erro ao atualizar as informações!');
       });
   };
 
   return (
-    <div className='UpdateBookInfo'>
+    <div className='UpdateCupomInfo'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>
@@ -74,13 +71,13 @@ function UpdateBookInfo(props) {
         <div className='col-md-8 m-auto'>
           <form noValidate onSubmit={onSubmit}>
             <div className='form-group'>
-              <label htmlFor='title'>Titulo do Cupom</label>
+              <label htmlFor='titulo'>Titulo do Cupom</label>
               <input
                 type='text'
-                placeholder='Title of the Book'
-                name='title'
+                placeholder='Titulo do Cupom'
+                name='Titulo'
                 className='form-control'
-                value={book.title}
+                value={cupom.titulo}
                 onChange={onChange}
               />
             </div>
@@ -88,56 +85,31 @@ function UpdateBookInfo(props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='author'>Campanha</label>
+              <label htmlFor='desconto'>Campanha</label>
               <input
                 type='text'
-                placeholder='Author'
-                name='author'
+                placeholder='Desconto'
+                name='desconto'
                 className='form-control'
-                value={book.author}
+                value={cupom.desconto}
                 onChange={onChange}
               />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='description'>Como usar o cupom</label>
+              <label htmlFor='comousar'>Como usar o cupom</label>
               <textarea
                 type='text'
-                placeholder='Description of the Book'
-                name='description'
+                placeholder='Description of the Cupom'
+                name='comousar'
                 className='form-control'
-                value={book.description}
+                value={cupom.comousar}
                 onChange={onChange}
               />
             </div>
             <br />
 
-            <div className='form-group'>
-              <label htmlFor='published_date'>Data de publicação</label>
-              <input
-                type='text'
-                placeholder='Published Date'
-                name='published_date'
-                className='form-control'
-                value={book.published_date}
-                onChange={onChange}
-              />
-            </div>
-            <br />
-
-            <div className='form-group'>
-              <label htmlFor='publisher'>Mensagem do cupom</label>
-              <input
-                type='text'
-                placeholder='Publisher of the Book'
-                name='publisher'
-                className='form-control'
-                value={book.publisher}
-                onChange={onChange}
-              />
-            </div>
-            <br />
 
             <button
               type='submit'
@@ -152,4 +124,4 @@ function UpdateBookInfo(props) {
   );
 }
 
-export default UpdateBookInfo;
+export default UpdateCupomInfo;

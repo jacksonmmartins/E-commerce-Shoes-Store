@@ -47,10 +47,10 @@ function App() {
             <Route element={<PrivateRoute />}>
             <Route exact path="/userhome" element={<Homeuser />} />
 
-            <Route exact path="/create-book" element={<CriarCupom />} />
+            <Route exact path="/create-cupom" element={<CriarCupom />} />
             <Route exact path="/ListaDeCupons" element={<ListaDeCupons />} />
-            <Route exact path="/show-book/:id" element={<DetalhesDoCupom />} />
-            <Route exact path="/edit-book/:id" element={<UpdateCupomInfo />} />
+            <Route exact path="/show-cupom/:id" element={<DetalhesDoCupom />} />
+            <Route exact path="/edit-cupom/:id" element={<UpdateCupomInfo />} />
 
           </Route>
         </Routes>

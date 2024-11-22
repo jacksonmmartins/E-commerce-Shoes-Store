@@ -3,16 +3,16 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Desconto from './Img/desconto.png'
 
-const BookCard = ({ book }) => {
+const CupomCard = ({ cupom }) => {
 
   return (
     <div className='card-container text-center'>
       <Card>
         <br />
-        <Link to={`/show-book/${book._id}`} class='disable_links'>
+        <Link to={`/show-cupom/${cupom._id}`} class='disable_links'>
           <img
             src={Desconto}
-            alt='Books'
+            alt='Cupons'
             height={200}
             width={200}
           />
@@ -20,11 +20,11 @@ const BookCard = ({ book }) => {
             <br />
             <div class='card-header text-dark'>
             <h2>
-              {book.title}
+              {cupom.titulo}
             </h2>
             </div>
-            <h3>{book.author}</h3>
-            <p>{book.description}</p>
+            <h3>{cupom.desconto}</h3>
+            <p>{cupom.comousar}</p>
           </div>
         </Link>
         <br />
@@ -36,4 +36,4 @@ const BookCard = ({ book }) => {
   );
 };
 
-export default BookCard;
+export default CupomCard;
