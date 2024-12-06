@@ -13,6 +13,12 @@ import ListaDeCupons from "./pages/components/CuponsAdministracao/ListaDeCupons"
 import DetalhesDoCupom from "./pages/components/CuponsAdministracao/DetalhesDoCupom";
 import UpdateCupomInfo from "./pages/components/CuponsAdministracao/UpdateCupomInfo";
 
+//Serviços de Criação, listagem, detalhes dos produtos, Update
+import ListaProdutos from './pages/components/ProdutosAdministração/ListaProdutos'
+import DetalhesProduto from './pages/components/ProdutosAdministração/DetalhesProduto'
+import CriarProduto from './pages/components/ProdutosAdministração/CriarProduto'
+import UpdateProduto from './pages/components/ProdutosAdministração/UpdateProdutoInfo'
+
 // Paginas de departamentos
 import ModaVerao from "./pages/CategoriasModa/ModaVerao/ModaVerao";
 import ModaInverno from "./pages/CategoriasModa/ModaInverno/ModaInverno";
@@ -54,6 +60,11 @@ function App() {
             <Route exact path="/ListaDeCupons" element={<ListaDeCupons />} />
             <Route exact path="/show-cupom/:id" element={<DetalhesDoCupom />} />
             <Route exact path="/edit-cupom/:id" element={<UpdateCupomInfo />} />
+
+            <Route exact path="/listaprodutos" element={<ListaProdutos />} />
+            <Route exact path="/show-product/:id" element={<DetalhesProduto />} />
+            <Route exact path="/create-product" element={<CriarProduto />} />
+            <Route exact path="/edit-product/:id" element={<UpdateProduto />} />
 
           </Route>
         </Routes>

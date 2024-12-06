@@ -28,7 +28,7 @@ function ShowCupomList() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center text-white'>Painel de gerenciamento de Cupons</h2>
+            <h2 className='display-4 text-center text-white'>Painel de gerenciamento de Cupons e Produtos</h2>
             <br />
           </div>
           
@@ -39,12 +39,22 @@ function ShowCupomList() {
             >
               + Adicionar Cupom de Desconto
             </Link>
-            <br />
-            <br />
-            <hr />
+         
+          <hr />
           </div>
+       
+    
         </div>
-
+        <div className='col-md-11'>
+            <Link
+              to='/listaprodutos'
+              className='btn btn-outline-warning container'
+            >
+              Ir para a página de administração de produtos
+            </Link>
+        
+          
+          </div>
         <div className='list'>{cupomList}</div>
       </div>
     </div>
