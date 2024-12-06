@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CupomCard from './components/Cupomcard';
+import CupomCard from './components/CuponsAdministracao/Cupomcard';
 
 function CuponsHome() {
   const [cupons, setCupons] = useState([]);

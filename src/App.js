@@ -7,17 +7,18 @@ import PrivateRoute from "./pages/PrivateRoute.page";
 import Signup from "./pages/Signup.page";
 import Navbar from "./pages/Navbar"
 
-import CriarCupom from "./pages/components/CriarCupom";
-import ListaDeCupons from "./pages/components/ListaDeCupons";
-import DetalhesDoCupom from "./pages/components/DetalhesDoCupom";
-import UpdateCupomInfo from "./pages/components/UpdateCupomInfo";
-import Supportus from './pages/Supportus';
-import Contact from './pages/Contact';
+//Serviços de Criação, listagem, detalhes dos cupons, Update
+import CriarCupom from "./pages/components/CuponsAdministracao/CriarCupom";
+import ListaDeCupons from "./pages/components/CuponsAdministracao/ListaDeCupons";
+import DetalhesDoCupom from "./pages/components/CuponsAdministracao/DetalhesDoCupom";
+import UpdateCupomInfo from "./pages/components/CuponsAdministracao/UpdateCupomInfo";
 
+// Paginas de departamentos
 import ModaVerao from "./pages/CategoriasModa/ModaVerao/ModaVerao";
 import ModaInverno from "./pages/CategoriasModa/ModaInverno/ModaInverno";
 import VestOutlet from "./pages/CategoriasModa/VestOutlet/VestOutlet";
-
+import Supportus from './pages/Supportus';
+import Contact from './pages/Contact';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -25,6 +26,7 @@ import './index.css'
 
 import { Container } from "react-bootstrap";
 import Footer from "./pages/Footer";
+
 
 function App() {
   return (
@@ -43,6 +45,7 @@ function App() {
           <Route exact path="/modaverao" element={<ModaVerao />} />
           <Route exact path="/modainverno" element={<ModaInverno />} />
           <Route exact path="/vestoutlet" element={<VestOutlet />} />
+          
 
             <Route element={<PrivateRoute />}>
             <Route exact path="/userhome" element={<Homeuser />} />

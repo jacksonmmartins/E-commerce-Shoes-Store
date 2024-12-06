@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Desconto from './Img/desconto.png'
+import Desconto from '../Img/desconto.png'
 
 const CupomCard = ({ cupom }) => {
 

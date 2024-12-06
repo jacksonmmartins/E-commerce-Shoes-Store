@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
 import { useContext } from 'react';
 import { UserContext } from './contexts/user.context';
-import ShowBookList from './components/ListaDeCupons'
+import ShowCupomList from './components/CuponsAdministracao/ListaDeCupons'
 
 export default function Home() {
   const { logOutUser } = useContext(UserContext);
@@ -23,8 +23,8 @@ export default function Home() {
 
   return (
     <>
-      <ShowBookList />
-      <Button variant="contained" onClick={logOut}>Sair</Button>
+      <ShowCupomList />
+      <Button variant="contained" onClick={logOut} className='col-md-11'>Sair</Button>
     </>
   )
 }
