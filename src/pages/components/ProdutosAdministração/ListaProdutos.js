@@ -13,7 +13,7 @@ function ShowProductList() {
         setProducts(res.data);
       })
       .catch((err) => {
-        console.log('Error from ShowCupomList');
+        console.log('Error from ShowProductList');
       });
   }, []);
 

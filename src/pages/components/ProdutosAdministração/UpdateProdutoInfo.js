@@ -58,7 +58,7 @@ function UpdateProdutoInfo(props) {
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
-            <Link to='/' className='btn btn-outline-warning float-left'>
+            <Link to='/listaprodutos' className='btn btn-outline-warning float-left'>
               Mostrar produtos ativos
             </Link>
           </div>
@@ -75,21 +75,21 @@ function UpdateProdutoInfo(props) {
               <input
                 type='text'
                 placeholder='Titulo do Produto'
-                name='Titulo'
+                name='titulo'
                 className='form-control'
                 value={product.titulo}
                 onChange={onChange}
               />
             </div>
-          
+
             <br />
 
             <div className='form-group'>
-              <label htmlFor='coleção'>Coleção</label>
+              <label htmlFor='colecao'>Coleção</label>
               <input
                 type='text'
                 placeholder='Coleção'
-                name='coleção'
+                name='colecao'
                 className='form-control'
                 value={product.colecao}
                 onChange={onChange}
@@ -98,11 +98,11 @@ function UpdateProdutoInfo(props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='preço'>Preço do produto</label>
+              <label htmlFor='preco'>Preço do produto</label>
               <textarea
                 type='text'
                 placeholder='Preço do produto'
-                name='preço'
+                name='preco'
                 className='form-control'
                 value={product.preco}
                 onChange={onChange}

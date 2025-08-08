@@ -2,6 +2,7 @@ import React from 'react';
 import { MDBCarousel, MDBCarouselItem, MDBCarouselCaption } from 'mdb-react-ui-kit';
 
 //Imports dos destaques
+//import banner from '../Img/Banner.png'
 import Promo from '../Img/Ofertas do Dia.png';
 import Novidades from '../Img/Novidades.png';
 import Cadastro from '../Img/Baner_cadastro.png'
@@ -9,6 +10,7 @@ import { Card } from 'react-bootstrap';
 
 export default function Carouselhome() {
   return (
+    <>
     <MDBCarousel showControls fade >
       <MDBCarouselItem >
         <Card>
@@ -33,5 +35,6 @@ export default function Carouselhome() {
         </MDBCarouselCaption>
       </MDBCarouselItem>
     </MDBCarousel>
+    </>
   );
 }

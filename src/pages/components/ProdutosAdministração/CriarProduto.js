@@ -29,10 +29,10 @@ const CreateProduct = (props) => {
           sku: "",
         });
         // Push to /
-        navigate("/");
+        navigate("/listaprodutos");
       })
       .catch((err) => {
-        console.log("Error in CreateCupom!");
+        console.log("Error in CreateProduct!");
       });
   };
 
@@ -42,7 +42,7 @@ const CreateProduct = (props) => {
         <div className="row">
           <div className="col-md-8 m-auto">
             <br />
-            <Link to="/" className="btn btn-outline-warning float-left">
+            <Link to="/listaprodutos" className="btn btn-outline-warning float-left">
               Mostrar lista de Produtos
             </Link>
           </div>
@@ -61,12 +61,12 @@ const CreateProduct = (props) => {
                 />
               </div>
               <br />
-              
+
               <div className="form-group">
                 <input
                   type="text"
                   placeholder="Coleção"
-                  name="coleção"
+                  name="colecao"
                   className="form-control"
                   value={product.colecao}
                   onChange={onChange}
@@ -77,7 +77,7 @@ const CreateProduct = (props) => {
                 <input
                   type="text"
                   placeholder="Preço do produto"
-                  name="preço"
+                  name="preco"
                   className="form-control"
                   value={product.preco}
                   onChange={onChange}

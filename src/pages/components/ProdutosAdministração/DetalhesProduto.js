@@ -15,7 +15,7 @@ function ShowProductDetails(props) {
         setProduct(res.data);
       })
       .catch((err) => {
-        console.log('Erro ao retornar os detalhes do cupom');
+        console.log('Erro ao retornar os detalhes do produto');
       });
   }, [id]);
 
@@ -23,10 +23,10 @@ function ShowProductDetails(props) {
     axios
       .delete(`https://api-cadastro-de-produtos.vercel.app/api/products/${id}`)
       .then((res) => {
-        navigate('/');
+        navigate('/listaprodutos');
       })
       .catch((err) => {
-        console.log('Erro ao retornar os detalhes do cupom');
+        console.log('Erro ao retornar os detalhes do produto');
       });
   };
 
@@ -65,14 +65,14 @@ function ShowProductDetails(props) {
         <div className='row'>
           <div className='col-md-10 m-auto'>
             <br /> <br />
-            <Link to='/' className='btn btn-outline-warning float-left'>
+            <Link to='/listaprodutos' className='btn btn-outline-warning float-left'>
               Mostrar todos os produtos ativos
             </Link>
           </div>
           <br />
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Registro do produto</h1>
-            <p className='lead text-center'>Informações do produto ativo</p>
+            <h1 className='display-4 text-center text-white'>Registro do produto</h1>
+            <p className='lead text-center text-white'>Informações do produto ativo</p>
             <hr /> <br />
           </div>
           <div className='col-md-10 m-auto'>{ProductItem}</div>
